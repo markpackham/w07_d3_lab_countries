@@ -2,9 +2,9 @@
     <div>
         <h1>Countries</h1>
         <div class="main-container">
-          <country-select :countries="countries"></country-select>
             <country-list :countries="countries"></country-list>
             <country-detail :country="selectedCountry"></country-detail>
+            <country-select :countries="countries"></country-select>
         </div>
     </div>
 </template>
