@@ -48,6 +48,8 @@ export default {
 ul {
   list-style: none;
 }
+.flag {
+  width: 50px;
+  height: 30px;
+}
 </style>
-
-body > div > div > div:nth-child(1) > ul > li:nth-child(1)
