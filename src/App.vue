@@ -11,31 +11,30 @@
 <script>
 import { eventBus } from "./main.js";
 import CountryList from "./components/CountryList.vue";
-import CountryDetail from "./components/CountryDetail.vue"
+import CountryDetail from "./components/CountryDetail.vue";
 
 export default {
-    name: "app",
-    data(){
-        return {
-            countries: [],
-            selectedCountry: null
-        }
-    },
-    mounted(){
-        fetch("https://restcountries.eu/rest/v2/all")
-        .then(res => res.json())
-        .then(countries => this.countries = countries)
+  name: "app",
+  data() {
+    return {
+      countries: [],
+      selectedCountry: null,
+    };
+  },
+  mounted() {
+    fetch("https://restcountries.eu/rest/v2/all")
+      .then(res => res.json())
+      .then(countries => (this.countries = countries));
 
-        eventBus.$on("country-selected", (country) => {
-            this.selectedCountry = country;
-        })
-    },
-    components:{
-        "country-list": CountryList,
-        "country-detail": CountryDetail
-    }
-
-}
+    eventBus.$on("country-selected", country => {
+      this.selectedCountry = country;
+    });
+  },
+  components: {
+    "country-list": CountryList,
+    "country-detail": CountryDetail,
+  },
+};
 </script>
 
 <style>
@@ -43,4 +42,9 @@ export default {
   display: flex;
   justify-content: space-between;
 }
+ul {
+  list-style: none;
+}
 </style>
+
+body > div > div > div:nth-child(1) > ul > li:nth-child(1)
