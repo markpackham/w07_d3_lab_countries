@@ -53,6 +53,15 @@ h1 {
 ul {
   list-style: none;
 }
+.full-list {
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.2rem;
+}
+.full-list:hover {
+  font-size: 1.5rem;
+  color: blue;
+}
 .flag {
   width: 50px;
   height: 30px;
