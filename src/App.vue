@@ -41,9 +41,14 @@ export default {
 </script>
 
 <style>
+h1 {
+  text-align: center;
+  padding: 1rem;
+}
 .main-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 1rem;
 }
 ul {
   list-style: none;
